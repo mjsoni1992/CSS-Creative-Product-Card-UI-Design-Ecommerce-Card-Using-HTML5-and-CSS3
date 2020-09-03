@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+    background: #000;
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    max-width: 400px;
+    background: #000;
+    box-shadow: 0px 25px 500px -42px #fff;
+    padding: 25px;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+
+    .image_box {
+        margin-bottom: 50px;
+        transition: all 0.5s;
+
+        img {
+            max-width: 250px;
+            transform: rotate(30deg);
+            transition: all 0.5s;
+        }
+
+        &:before {
+            content: "";
+            background-color: #cf3945;
+            transition: all 0.5s;
+            width: 100%;
+            height: 40vh;
+            position: absolute;
+            border-radius: 100%;
+            top: -60px;
+            left: -30%;
+        }
+    }
+
+    .pTitle {
+        color: #fff;
+        text-align: center;
+        font-size: 32px;
+        transform: translateY(130%);
+        transition: all 0.5s;
+
+        &:before {
+            content: "NIke";
+            position: absolute;
+            top: 50%;
+            color: #fff;
+            font-size: 100px;
+            font-weight: 900;
+            left: 0;
+            transform: translateY(-50%);
+            opacity: 0.1;
+            z-index: 0;
+            text-align: center;
+            width: 100%;
+        }
+
+    }
+
+    .sizeAttr {
+        text-align: center;
+        margin-top: 25px;
+
+        .sizeLabel {
+            color: #fff;
+            font-size: 17px;
+            text-transform: uppercase;
+            margin-right: 15px;
+
+        }
+
+        .sizeNumber {
+            color: #000;
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+
+            &:hover {
+                background-color: #cf3945;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .colorAttr {
+        text-align: center;
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .colorLabel {
+            color: #fff;
+            font-size: 17px;
+            text-transform: uppercase;
+            margin-right: 15px;
+        }
+
+        .colorWhite {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 100%;
+            margin: 0 5px;
+        }
+
+        .colorBlue {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background-color: blue;
+            padding: 5px;
+            border-radius: 100%;
+            margin: 0 5px;
+        }
+
+        .colorRed {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background-color: red;
+            padding: 5px;
+            border-radius: 100%;
+            margin: 0 5px;
+        }
+    }
+
+    .buyNow {
+        text-align: center;
+        margin-top: 25px;
+
+        a {
+            color: #000;
+            background: #fff;
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 25px;
+            transition: all 0.5s;
+
+            &:hover {
+                background-color: #cf3945;
+                color: #fff;
+            }
+        }
+    }
+
+    .hoverWrapper {
+        transform: translateY(130%);
+        transition: all 0.5s;
+    }
+
+    &:hover {
+        img {
+            transform: rotate(0deg);
+        }
+
+        .image_box:before {
+            left: -60%;
+        }
+
+        .hoverWrapper {
+            transform: translateY(0);
+        }
+
+        .pTitle {
+            transform: translateY(0);
+        }
+
+    }
+}
